@@ -1,0 +1,38 @@
+#Define the menu of Cafe
+menu = {
+    'Pizza': 250,
+    'Pasta': 200,
+    'Burger': 100,
+    'Hot Dogs': 150,
+    'Salad': 80,
+    'Coffee': 200,
+    'Black Coffee': 150,
+    'Tea': 200,
+    'Black Tea': 150,
+}
+
+#Greet
+print("\nWelcome to Ayantika's Cafe\n")
+print("Pizza: Rs250\nPasta: Rs200\nBurger: Rs100\nHot Dogs: Rs150\nSalad: Rs80\nCoffee: Rs200\nBlack Coffee: Rs150\nTea: Rs200\nBlack Tea: Rs150\n ")
+
+order_total = 0
+#80 + 70 = 150
+
+item_1 = input("Enter the name of item you want to order = ")
+if item_1 in menu:
+    order_total += menu[item_1] #0 + 200
+    print(f"Your item {item_1} has been added to your order")
+
+else:
+    print(f"Ordered item {item_1} is not avaialable yet")
+
+another_order = input("Do you want to add another item? (Yes/No) ")
+if another_order == "Yes":
+    item_2 = input("Enter the name of second item = ")
+    if item_2 in menu:
+        order_total += menu[item_2]
+        print(f"Item {item_2} has been added to order")
+    else:
+        print(f"Ordered item {item_2} is not avaialable!")
+
+print(f"The total amount of items to pay is {order_total}")
